@@ -16,4 +16,8 @@ public class StudentRegistrationSystemTest {
         Assertions.assertEquals(2, student.getYear());
         Assertions.assertEquals(2, student.getSemester());
     }
+
+    @Test
+    void name() {
+    }
 }

@@ -1,12 +1,19 @@
-//STUDENT REGISTRATION SYSTEM
+/*
+       STUDENT REGISTRATION SYSTEM
+this student registration system take student name,student sex, student id,
+department, collage, year and semester from the user as input and
+display all student information in a table form.
+ */
 package StudentRegistrationSystem;
+
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
 public class StudentRegistrationSystem {
-    private List<Student> students;
+
+    final List<Student> students;
 
     public StudentRegistrationSystem() {
         students = new ArrayList<>();
@@ -45,9 +52,10 @@ public class StudentRegistrationSystem {
         }
 
     }
-
     public void displayStudents() {
+        System.out.println("                                                ");
         System.out.println("-----------------------STUDENT REGISTRATION DETAILS------------------------------------------------------");
+        System.out.println("                                                ");
         System.out.println("=========================================================================================================");
 
         System.out.printf("%-15s %-15s %-15s %-15s %-15s %-10s %-10s\n",
@@ -61,9 +69,10 @@ public class StudentRegistrationSystem {
             System.out.println("----------------------------------------------------------------------------------------------------------");
         }
     }
-
     public static void main(String[] args) {
+        System.out.println("                                                ");
         System.out.println("--------------------STUDENT REGISTRATION SYSTEM-----------------------------------------------------");
+        System.out.println("                                                  ");
 
         StudentRegistrationSystem system = new StudentRegistrationSystem();
 
@@ -82,17 +91,17 @@ public class StudentRegistrationSystem {
 
             switch (choice) {
                 case 1:
-                try{
-                    System.out.print("Enter the number of students to register: ");
-                    int numStudents = scanner.nextInt();
+                    try{
+                        System.out.print("Enter the number of students to register: ");
+                        int numStudents = scanner.nextInt();
 
-                    for (int i = 0; i < numStudents; i++) {
-                        System.out.println("Student " + (i + 1) + ":");
-                        system.registerStudent();
-                        System.out.println();}
+                        for (int i = 0; i < numStudents; i++) {
+                            System.out.println("Student " + (i ++) + ":");
+                            system.registerStudent();
+                            System.out.println();}
                     }
-                catch (InputMismatchException ex){
-                        System.out.println("Enter Intiger Number Only"+ex);
+                    catch (InputMismatchException ex){
+                        System.out.println("Enter Integer Number Only"+ex);
                     }
 
                     break;
@@ -104,11 +113,10 @@ public class StudentRegistrationSystem {
                     break;
                 default:
                     System.out.println("Invalid choice. Please try again.");
-
             }
-        } while (choice != 3);
+        }
+        while (choice != 3);
 
         system.displayStudents();
     }
-
 }

@@ -1,14 +1,18 @@
 package StudentRegistrationSystem;
-class Student {
-    private String name;
-    private String sex;
-    private String studentId;
-    private String department;
-    private String college;
-    private int year;
-    private int semester;
 
+// Child class
+class Student extends StudentRegistrationSystem {
+    final String name;
+    final String sex;
+    final String studentId;
+    final String department;
+    final String college;
+    final int year;
+    final int semester;
+
+    //constructor
     public Student(String name,String sex, String studentId, String department, String college, int year, int semester) {
+
         this.name = name;
         this.sex = sex;
         this.studentId = studentId;
@@ -17,6 +21,7 @@ class Student {
         this.year = year;
         this.semester = semester;
     }
+    //getters methods
     public String getName() {
         return name;
     }
@@ -39,4 +44,3 @@ class Student {
         return semester;
     }
 }
-
