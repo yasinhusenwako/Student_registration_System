@@ -3,6 +3,16 @@ package StudentRegistrationSystem;
 // Child class
 class Student extends StudentRegistrationSystem {
 
+    public static String department;
+    public static String name;
+    static String sex;
+    static int age;
+    static String studentId;
+    static String college;
+    static int year;
+    static int semester;
+
+
     //constructor
     public Student(String name,String sex,int age, String studentId, String department, String college, int year, int semester) {
         super();//to indicate that patent class is constructed first
