@@ -11,9 +11,17 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
+//parent class
 public class StudentRegistrationSystem {
-
-    final List<Student> students;
+     String name;
+     String sex;
+     int age;
+     String studentId;
+     String department;
+     String college;
+     int year;
+     int semester;
+     List<Student> students;
 
     public StudentRegistrationSystem() {
         students = new ArrayList<>();
@@ -23,28 +31,40 @@ public class StudentRegistrationSystem {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            System.out.print("Enter student name: ");
+            System.out.print("Enter student's name: ");
             String name = scanner.nextLine();
+            System.out.println();
 
-            System.out.print("Enter student sex: ");
+            System.out.print("Enter student's sex: ");
             String sex = scanner.nextLine();
+            System.out.println();
 
-            System.out.print("Enter student ID: ");
+            System.out.print("Enter student's Age: ");
+            int age = scanner.nextInt();
+            System.out.println();
+
+
+            System.out.print("Enter student's ID: ");
             String studentId = scanner.nextLine();
+            System.out.println();
 
             System.out.print("Enter department: ");
             String department = scanner.nextLine();
+            System.out.println();
 
             System.out.print("Enter college: ");
             String college = scanner.nextLine();
+            System.out.println();
 
             System.out.print("Enter year: ");
             int year = scanner.nextInt();
+            System.out.println();
 
             System.out.print("Enter semester: ");
             int semester = scanner.nextInt();
+            System.out.println();
 
-            Student student = new Student(name,sex, studentId, department, college, year, semester);
+            Student student = new Student(name,sex,age, studentId, department, college, year, semester);
             students.add(student);
         }
         catch (InputMismatchException e){
@@ -58,13 +78,13 @@ public class StudentRegistrationSystem {
         System.out.println("                                                ");
         System.out.println("=========================================================================================================");
 
-        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-10s %-10s\n",
-                "Name","Sex", "Student ID", "Department", "College", "Year", "Semester");
+        System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-10s %-10s\n",
+                "Name","Sex","Age", "Student ID", "Department", "College", "Year", "Semester");
         System.out.println("-----------------------------------------------------------------------------------------------------------");
 
         for (Student student : students) {
-            System.out.printf("%-15s %-15s %-15s %-15s %-15s %-10d %-10d\n",
-                    student.getName(),student.getSex(), student.getStudentId(), student.getDepartment(),
+            System.out.printf("%-15s %-15s %-15s %-15s %-15s %-15s %-10d %-10d\n",
+                    student.getName(),student.getSex(),student.getAge(), student.getStudentId(), student.getDepartment(),
                     student.getCollege(), student.getYear(), student.getSemester());
             System.out.println("----------------------------------------------------------------------------------------------------------");
         }

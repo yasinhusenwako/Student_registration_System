@@ -2,19 +2,14 @@ package StudentRegistrationSystem;
 
 // Child class
 class Student extends StudentRegistrationSystem {
-    final String name;
-    final String sex;
-    final String studentId;
-    final String department;
-    final String college;
-    final int year;
-    final int semester;
 
     //constructor
-    public Student(String name,String sex, String studentId, String department, String college, int year, int semester) {
+    public Student(String name,String sex,int age, String studentId, String department, String college, int year, int semester) {
+        super();//to indicate that patent class is constructed first
 
         this.name = name;
         this.sex = sex;
+        this.age = age;
         this.studentId = studentId;
         this.department = department;
         this.college = college;
@@ -28,6 +23,8 @@ class Student extends StudentRegistrationSystem {
     public String getSex() {
         return sex;
     }
+    public  int getAge(){
+        return age;}
     public String getStudentId() {
         return studentId;
     }
