@@ -1,1 +1,1 @@
-Software Engineer and Fulstuck Developer
+Software Engineer and Fullstuck Developer
