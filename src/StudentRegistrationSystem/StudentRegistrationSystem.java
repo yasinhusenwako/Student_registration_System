@@ -1,6 +1,6 @@
 /*
        STUDENT REGISTRATION SYSTEM
-this student registration system take student name,student sex, student id,
+this student registration system take student name,student age,student sex, student id,
 department, collage, year and semester from the user as input and
 display all student information.
  */
