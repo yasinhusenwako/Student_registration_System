@@ -1,6 +1,6 @@
 package StudentRegistrationSystem;
 
-// Child class
+// Child class that extendes StudentRegistrationSystem class
 class Student extends StudentRegistrationSystem {
 
     public static String department;
@@ -11,7 +11,6 @@ class Student extends StudentRegistrationSystem {
     static String college;
     static int year;
     static int semester;
-
 
     //constructor
     public Student(String name,String sex,int age, String studentId, String department, String college, int year, int semester) {

@@ -3,7 +3,7 @@ package StudentRegistrationSystem;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
+//unit testing class to test code
 class StudentTest {
     Student student = new Student("Yasin Husen", "M", 22,"1826" ,"Software Engineering", "CCI", 2, 2);
     @Test

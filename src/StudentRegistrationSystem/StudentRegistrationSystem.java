@@ -2,10 +2,10 @@
        STUDENT REGISTRATION SYSTEM
 this student registration system take student name,student sex, student id,
 department, collage, year and semester from the user as input and
-display all student information in a table form.
+display all student information.
  */
 package StudentRegistrationSystem;
-
+// importing packages
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -25,8 +25,8 @@ import java.util.Scanner;
 
     // Method to display the registration form
     public void displayStudents() {
-        // Displaying header information
 
+        // Displaying header information
         System.out.println("=================================================================================================================================");
         System.out.println("                                             HARAMAYA UNIVERSITY                                                                 ");
         System.out.println("=================================================================================================================================");
@@ -53,14 +53,14 @@ import java.util.Scanner;
         System.out.println(".......................................................................................................................................");
     }
      List<Student> students;
-
+// Array list to store student insormation
     public StudentRegistrationSystem() {
         students = new ArrayList<>();
     }
-
+  //method to take input from the user
     public void registerStudent() {
         Scanner scanner = new Scanner(System.in);
-
+//exception handling used
         try {
             System.out.print("Enter department: ");
             String department = scanner.nextLine();
@@ -94,17 +94,17 @@ import java.util.Scanner;
         }
 
     }
-    // The Slip class is responsible for displaying a registration slip for a student
+    //Main method here will called all other methods
     public static void main(String[] args) {
         System.out.println("                                                ");
         System.out.println("--------------------STUDENT REGISTRATION SYSTEM-----------------------------------------------------");
         System.out.println("                                                  ");
-
+//creating an object instance and instantiating
         StudentRegistrationSystem system = new StudentRegistrationSystem();
-
+// Scanner class to receive input from user
         Scanner scanner = new Scanner(System.in);
         int choice;
-
+//do while finite loop to repetitively input information and display
         do {
             {
                 System.out.println("---------------------------------------------------------------------------------------------------------");
