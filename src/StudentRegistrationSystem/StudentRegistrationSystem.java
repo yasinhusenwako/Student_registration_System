@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 //parent class
-public class StudentRegistrationSystem {
+ public class StudentRegistrationSystem {
      String name;
      String sex;
      int age;
@@ -31,38 +31,29 @@ public class StudentRegistrationSystem {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            System.out.print("Enter student's name: ");
-            String name = scanner.nextLine();
-            System.out.println();
-
-            System.out.print("Enter student's sex: ");
-            String sex = scanner.nextLine();
-            System.out.println();
-
-            System.out.print("Enter student's Age: ");
-            int age = scanner.nextInt();
-            System.out.println();
-
-
-            System.out.print("Enter student's ID: ");
-            String studentId = scanner.nextLine();
-            System.out.println();
-
             System.out.print("Enter department: ");
             String department = scanner.nextLine();
-            System.out.println();
 
             System.out.print("Enter college: ");
             String college = scanner.nextLine();
-            System.out.println();
+
+            System.out.print("Enter student's name: ");
+            String name = scanner.nextLine();
+
+            System.out.print("Enter student's sex: ");
+            String sex = scanner.nextLine();
+
+            System.out.print("Enter student's Age: ");
+            int age = scanner.nextInt();
+
+            System.out.print("Enter student's ID: ");
+            String studentId = scanner.next();
 
             System.out.print("Enter year: ");
             int year = scanner.nextInt();
-            System.out.println();
 
             System.out.print("Enter semester: ");
             int semester = scanner.nextInt();
-            System.out.println();
 
             Student student = new Student(name,sex,age, studentId, department, college, year, semester);
             students.add(student);

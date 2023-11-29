@@ -16,6 +16,7 @@ class StudentTest {
     }
     @Test
     void getAge() {
+            Assertions.assertEquals(22, student.getAge());
     }
     @Test
     void getStudentId() {
